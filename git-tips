@@ -6,5 +6,34 @@ git checkout <hash> -- file1 // git checkout one speical version of file.
 
 git reset HEAD file1  //unstage
 git rm file_to_delete
+git rm --cached file_to_delete   // remove from tracking.
 
 git commit --amend -m "this is amend message"
+
+check what file is supposed to ignore.
+https://github.com/github/gitignore
+
+HEAD^   == HEAD~1 
+HEAD~2
+<hash>^t 
+
+git ls-tree HEAD^1
+git log --oneline
+git log --since="1.day"
+git log --since="1.hour"  file1
+
+git diff hash1..hash2  file1
+git diff -b -w hash1..hash2  file1  #ignore space.
+
+git branch --merged
+git stash save "my stash"
+git stash list
+git stash show stash@{0}
+
+git stash pop
+git stash apply  //still kept in stash
+
+git stash drop stash@{0}
+git stash clear // drop all stash
+
+
