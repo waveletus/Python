@@ -1,0 +1,10 @@
+git diff --color-words file1
+git diff --staged
+git mv file1 file2
+git checkout -- file1  //keep current branch,undo change. 
+git checkout <hash> -- file1 // git checkout one speical version of file.
+
+git reset HEAD file1  //unstage
+git rm file_to_delete
+
+git commit --amend -m "this is amend message"
