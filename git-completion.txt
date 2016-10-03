@@ -1,1 +1,7 @@
 curl -OL https://github.com/git/git/raw/master/contrib/completion/git-completion.bash
+
+mv git-completion.bash ~/.git-completion.bash
+add this line to .bash.profile:
+if [ -f ~/.git-completion.bash ]; then
+    source ~/.git-completion.bash
+fi
