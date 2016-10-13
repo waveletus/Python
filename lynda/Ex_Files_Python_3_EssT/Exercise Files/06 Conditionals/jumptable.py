@@ -24,6 +24,8 @@ def main():
     j.set('three', three)
     j.set('default', default)
 
+    print("hello")
+
     try:
         j.go('seven')
     except RuntimeError as e:

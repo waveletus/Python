@@ -1,0 +1,116 @@
+(1). '{} abv'.format(var)'
+a, b = 0, 1
+if a < b:
+    print('a ({}) is less than b ({})'.format(a, b))
+else:
+    print('a ({}) is not less than b ({})'.format(a, b))
+
+(2). dict 
+testDict = dict(a="b")
+print(testDict["a"])
+
+(3)
+#!/usr/bin/python3
+
+class AnimalActions:
+    def quack(self): return self.strings['quack']
+
+class Duck(AnimalActions):
+    strings = dict(
+        quack = "Quaaaaak!"
+    )
+ 
+class Person(AnimalActions):
+    strings = dict(
+        quack = "The person imitates a duck."
+    )
+
+class Dog(AnimalActions):
+    strings = dict(
+        quack = "The dog cannot quack."
+    )
+
+def in_the_doghouse(dog):
+    print(dog.bark())
+
+def in_the_forest(duck):
+    print(duck.quack())
+ 
+def main():
+    donald = Duck()
+    john = Person()
+    fido = Dog()
+
+    print("- In the forest:")
+    for o in ( donald, john, fido ):
+        in_the_forest(o)
+
+(4) Throw exception
+raise RuntimeError('undefined jump: {}'.format(index))
+
+(5) print with special separate character.
+    for i in range(25):
+        print(i, end = ' ')
+
+(6) 43 // 7  ==> integer , 6
+r"this is \n a test"   #regular expression
+
+str = '''\      # \ ends one line. multiple line.
+    this is a
+    line of line
+    line of line
+    '''
+x = 'string'
+x[2:4] #ri , [open, non-close]
+d={'a':1, 'b':2}
+for k in d:
+    print k, d[k]
+
+d = dict(one=1, two=2) 
+d['one']     
+
+(7) def b(n):   print('{:08b}'.format(n))
+ >>> b(5)
+00000101
+
+(8) slice
+list[27:42:3]  # from index 27 to 42 (not included), every 3 element
+
+(9):  fun(*args, **kwargs)   #args: (1,23)  kwargs(dict)
+
+(10) Python2 vs Python3 string
+'this is a string {}'.format(4)    //new to python3
+d = dict(bob=a, fred=b)
+'this is {bob} and that is {fred}'.format(d)
+'this is {1}, {0} and that is {1}'.format(a, b)
+'this is {bob}'.format(bob='pig')
+
+
+
+'this is a string %d %d' % (a, b)  // need to know type
+
+(11) tuple is not changeable, list is.
+t=tuple(range(25))
+3 in t
+66 not in t
+for i in t: print i
+
+t.count(4)  
+
+(12) list  (index)
+x=[1,2]
+x.extend(range(25))
+x[2]=55
+
+(12) dict
+x.get('key')
+x['key']  --- throws exception if not exist
+del x['key']
+x
+for k in x: print x[k]
+for k,v in x.items print k, v
+
+(13) unit test
+import pdb;pdb.set_trace()
+
+

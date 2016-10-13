@@ -29,4 +29,6 @@ class my_range:
 def main():
     for i in my_range(5, 25, 3,5): print(i, end = ' ')
 
+    ''.center()
+
 if __name__ == "__main__": main()

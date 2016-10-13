@@ -19,5 +19,7 @@ class TweetTest(unittest.TestCase):
         short_tweeter.tweet(mock_twitter, "message!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         mock_twitter.PostUpdate.assert_called_with("message")
 
+        import pdb;pdb.set_trace()
+
 if __name__ == '__main__':
     unittest.main()
