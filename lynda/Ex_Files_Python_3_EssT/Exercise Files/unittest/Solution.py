@@ -1,20 +1,20 @@
 class Solution(object):
-    # def reverseString(self, s):
-    #     """
-    #     :type s: str
-    #     :rtype: str
-    #     """
-    #     l = len(s)
-    #     listStr = list(s)
-    #     for i in range(len(s)):
-    #         listStr[l-i-1] = s[i]
+    def reverseString1(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        l = len(s)
+        listStr = list(s)
+        for i in range(len(s)):
+            listStr[l - i - 1] = s[i]
 
-    #     return ''.join(listStr)
+        return ''.join(listStr)
 
-    # def reverseString(self, s):
-    #     return s[::-1]
+    def reverseString2(self, s):
+        return s[::-1]
 
-    def reverseString(self, s):
+    def reverseString3(self, s):
         return self.reverse(list(s), 0, len(s) - 1)
 
     def reverse(self, s, low, high):
@@ -24,6 +24,13 @@ class Solution(object):
         s[low], s[high] = s[high], s[low]
         return self.reverse(s, low + 1, high - 1)
 
+    def reverseString4(self, s):
+        return ''.join(reversed(list(s)))
 
-def main():
-    print(Solution().reverseString("abc dfad"))
+    def reverseString5(self, s):
+        n = len(s)
+        s = list(s)
+        for i in range(int(n/2)):
+            s[i], s[~i] = s[~i], s[i]
+
+        return ''.join(s)
